@@ -1,3 +1,4 @@
+import { CreateEmotionType } from '@/common/dto/create-emotion-dto';
 import { LoginDto } from '@/common/dto/login-dto';
 import { RegisterDto } from '@/common/dto/register-dto';
 import axiosInstance from '@/services/api.service';
@@ -6,7 +7,7 @@ import axios from 'axios';
 export async function apiController<T>(
   url: string,
   method: 'get' | 'post' | 'put' | 'patch' | 'delete',
-  data?: LoginDto | RegisterDto
+  data?: LoginDto | RegisterDto | CreateEmotionType
 ): Promise<T> {
   try {
     const config = {

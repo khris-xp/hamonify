@@ -18,7 +18,6 @@ export default function AuthLayout({
   const { userProfileQuery } = useAuth();
 
   useEffect(() => {
-    console.log(token);
     if (token && userProfileQuery) {
       setAuthentication(true);
       setUser(userProfileQuery.data as CommonUserModel);

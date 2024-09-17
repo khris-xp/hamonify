@@ -12,6 +12,6 @@ export const authService = {
     return await apiController('/auth/sign-up', 'post', registerRequest);
   },
   getUserProfile: async (): Promise<CommonUserModel> => {
-    return await apiController('/user/profile', 'get');
+    return await apiController('/users/profile', 'get');
   },
 };

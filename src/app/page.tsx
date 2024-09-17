@@ -1,10 +1,15 @@
-import Nav from './components/Nav'
+'use client';
+
+import Navbar from '@/components/Navbar/Navbar';
+import Tabs from '@/components/Tabs';
 
 export default function Home() {
-	return (
-	<div>
-		<Nav/>
-		Home Page
-	</div>
-  	);
+  return (
+    <div className='flex justify-center w-full mt-10'>
+      <Navbar />
+      <div className='flex justify-center w-full mt-10'>
+        <Tabs />
+      </div>
+    </div>
+  );
 }
