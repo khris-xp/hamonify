@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
     <div className='min-h-screen bg-gray-100 text-gray-900 flex justify-center items-center'>
       <div className='max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1'>
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
-            <h1 className='text-2xl xl:text-3xl font-extrabold'>Sign In</h1>
+            <h1 className='text-2xl xl:text-3xl font-extrabold'>Sign Up</h1>
             <div className='w-full flex-1 mt-8 text-indigo-700'>
               <div className='mx-auto max-w-xs'>
                 <div className='flex flex-col space-y-5'>
@@ -21,6 +21,36 @@ export default function SignInPage() {
                       <path d='M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z' />
                     </svg>
                     <input type='text' className='grow' placeholder='Email' />
+                  </label>
+                  <label className='input input-bordered flex items-center gap-2'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      viewBox='0 0 16 16'
+                      fill='currentColor'
+                      className='h-4 w-4 opacity-70'
+                    >
+                      <path d='M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z' />
+                    </svg>
+                    <input
+                      type='text'
+                      className='grow'
+                      placeholder='Username'
+                    />
+                  </label>
+                  <label className='input input-bordered flex items-center gap-2'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      viewBox='0 0 16 16'
+                      fill='currentColor'
+                      className='h-4 w-4 opacity-70'
+                    >
+                      <path d='M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z' />
+                    </svg>
+                    <input
+                      type='text'
+                      className='grow'
+                      placeholder='Fullname'
+                    />
                   </label>
                   <label className='input input-bordered flex items-center gap-2'>
                     <svg
@@ -51,11 +81,11 @@ export default function SignInPage() {
                     <circle cx='8.5' cy='7' r='4' />
                     <path d='M20 8v6M23 11h-6' />
                   </svg>
-                  <span className='ml-3'>Sign In</span>
+                  <span className='ml-3'>Sign Up</span>
                 </button>
-                <Link href='/sign-up'>
+                <Link href='/sign-in'>
                   <div className='mt-8 text-sm text-right font-semibold hover:text-indigo-600 hover:underline'>
-                    Create Account
+                    Already have an account?
                   </div>
                 </Link>
               </div>
