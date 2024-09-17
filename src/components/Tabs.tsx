@@ -1,24 +1,14 @@
 import { DateConstants } from '@/constants/date';
 import { Fragment } from 'react';
+import EmotionTabs from './Tabs/EmotionTabs';
 
-export default function Tabs({ children }: { children: React.ReactNode }) {
+export default function Tabs() {
   return (
     <Fragment>
       <div role='tablist' className='tabs tabs-bordered'>
         {DateConstants.map((date, index) => {
           return (
-            <Fragment key={index}>
-              <input
-                type='radio'
-                name='my_tabs_1'
-                role='tab'
-                className='tab'
-                aria-label={date.title}
-              />
-              <div role='tabpanel' className='tab-content p-10'>
-                {children}
-              </div>
-            </Fragment>
+            <EmotionTabs key={index} date={date} />
           );
         })}
       </div>

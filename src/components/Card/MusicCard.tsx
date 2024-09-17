@@ -1,40 +1,30 @@
 'use client';
 
+import { PlaylistResponse } from '@/common/dto/playlists-response';
 import Image from 'next/image';
 
-export default function MusicCard() {
-  const playlistUrl =
-    'https://open.spotify.com/embed/playlist/00GtTy6Ri1cHRaR6QAQpAr';
-
+export default function MusicCard(playlists: { playlists: PlaylistResponse }) {
   return (
     <div className='bg-white p-8 rounded-lg shadow-md w-80'>
       <Image
-        src='https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebb37bf3cb01fcd7620950a15ec'
+        src={playlists.playlists.images[0].url}
         alt='Chillaxer Playlist'
         className='w-64 h-64 mx-auto rounded-lg mb-4 shadow-lg shadow-teal-50'
         width={256}
         height={256}
       />
-      <h2 className='text-xl font-semibold text-center'>Chillaxer</h2>
+      <h2 className='text-xl font-semibold text-center'>
+        {playlists.playlists.name}
+      </h2>
       <p className='text-gray-600 text-sm text-center'>
-        Curated by everydaypam
+        {playlists.playlists.description}
       </p>
-
-      <div className='mt-6'>
-        <iframe
-          src={playlistUrl}
-          width='100%'
-          height='80'
-          frameBorder='0'
-          allowTransparency={true}
-          allow='encrypted-media'
-          className='rounded-lg'
-        ></iframe>
-      </div>
       <div className='mt-6 flex justify-center items-center'>
         <button
-          className='p-3 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none'
-          onClick={() => window.open(playlistUrl, '_blank')}
+          className='p-3 rounded-full hover:bg-gray-300 focus:outline-none'
+          onClick={() =>
+            window.open(playlists.playlists.external_urls.spotify, '_blank')
+          }
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'

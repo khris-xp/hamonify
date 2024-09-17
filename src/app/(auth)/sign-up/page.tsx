@@ -24,7 +24,6 @@ export default function SignUpPage() {
         username,
         fullname,
       });
-      console.log(response);
       await registerMutation.mutateAsync({
         email,
         password,
