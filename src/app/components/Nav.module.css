@@ -1,0 +1,45 @@
+/* Nav.module.css */
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: white; /* Adjust color as needed */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	box-shadow: 0 2px 1px -1px gray;
+	z-index: 1000;
+  }
+  
+  .navItems {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .logo {
+	flex-grow: 1;
+  }
+  
+  .logoImage {
+	height: 40px; /* Adjust logo size as needed */
+  }
+  
+  .authLinks {
+	display: flex;
+	gap: 20px; /* Space between sign-in and sign-up links */
+  }
+  
+  .authLinks li {
+	list-style-type: none;
+  }
+  
+  .authLinks a {
+	text-decoration: none;
+	color: black; /* Adjust link color */
+	font-weight: bold;
+  }
