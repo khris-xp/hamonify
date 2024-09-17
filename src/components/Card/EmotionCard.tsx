@@ -1,6 +1,5 @@
 import { EmotionDay } from '@/constants/day';
 import { Emotion } from '@/constants/emotion';
-import { emotionService } from '@/services/emotion.service';
 import Image from 'next/image';
 import EmotionButton from '../Button/EmotionButton';
 
@@ -10,19 +9,6 @@ type Props = {
 };
 
 export default function EmotionCard(props: Props) {
-  const createEmotion = async (emotion: string) => {
-    const createEmotion = {
-      name: emotion,
-      score: 1,
-      createdBy: 'test',
-      period: '2021-09-21',
-    };
-    try {
-      await emotionService.createEmotion(createEmotion);
-    } catch (error: unknown) {
-      console.error(error);
-    }
-  };
   return (
     <div className='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-5'>
       <div className='p-8 flex'>

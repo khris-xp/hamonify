@@ -11,7 +11,7 @@ export default function EmotionTabs({ date }: { date: { title: string } }) {
     [date.title]
   );
 
-  const { emotions, emotionByDate, playlists } = useEmotion(dateData);
+  const { playlists } = useEmotion(dateData);
 
   return (
     <Fragment>
@@ -27,7 +27,9 @@ export default function EmotionTabs({ date }: { date: { title: string } }) {
           <div className='flex justify-between space-x-16'>
             <div className='w-2/3'>
               {EmotionDayConstants.map((day, index) => {
-                return <EmotionCard key={index} day={day} dateData={dateData} />;
+                return (
+                  <EmotionCard key={index} day={day} dateData={dateData} />
+                );
               })}
             </div>
             <div className='w-1/3'>

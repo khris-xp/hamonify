@@ -15,7 +15,7 @@ export default function SignInPage() {
 
   const handleLogin = async () => {
     try {
-      const response = await authService.login({ email, password });
+      await authService.login({ email, password });
       await loginMutation.mutateAsync({ email, password });
       alert('Login successful');
       router.push('/');

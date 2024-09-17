@@ -19,7 +19,7 @@ export default function SignUpPage() {
 
   const handleSignUp = async () => {
     try {
-      const response = await authService.register({
+      await authService.register({
         email,
         password,
         username,
